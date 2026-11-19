@@ -13,7 +13,7 @@ GPT-PC connects to an MCP-compatible host. It does not bundle a language model o
 
 ## Quick start
 
-Requirements: Windows 10/11, Python 3.12+, and Git. The desktop console additionally needs Node.js 20.19+ and Rust tooling.
+Requirements: Windows 10/11, Python 3.12+, uv, and Git. The desktop console additionally needs Node.js 20.19+ and Rust tooling.
 
     git clone https://github.com/xuqinghuan675/GPT-PC-OpenSource.git
     cd GPT-PC-OpenSource
