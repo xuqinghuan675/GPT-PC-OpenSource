@@ -1,0 +1,44 @@
+# Local runtime and user data
+runtime/
+logs/
+media/
+chatgpt-agent-data/
+chatgpt-ui-data/
+config/machine.local.toml
+config/gmail-oauth-client.json
+config/gmail-oauth-token.json
+config/tunnel.env
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+*.db
+*.sqlite3
+*.sqlite
+*.key
+.bsk/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Tauri
+node_modules/
+dist/
+coverage/
+chatgpt-ui/src-tauri/target/
+
+# Optional external binaries (download locally; do not commit)
+desktop-workspace/browser-skill/bsk.exe
+desktop-workspace/VirtualDesktopAccessor.dll
+pc-mcp/scripts/shared_desktop/VirtualDesktopAccessor.dll
+*.vhdx
+
+# Temporary workspace sandboxes
+workspaces/

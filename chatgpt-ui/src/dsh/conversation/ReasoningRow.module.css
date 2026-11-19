@@ -1,0 +1,75 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 2px 0 6px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: calc(12px + var(--dsh-global-font-bump, 4px));
+  line-height: 18px;
+}
+
+.phase {
+  font-weight: 500;
+}
+
+.live {
+  color: var(--dsw-alias-label-caption);
+}
+
+.body {
+  max-width: 100%;
+  color: var(--dsw-alias-label-primary);
+  font-size: calc(var(--dsh-content-font-size, 14px) + var(--dsh-global-font-bump, 4px));
+  line-height: calc(24px + var(--dsh-content-font-delta, 0px));
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.root[data-phase='decision'] .phase,
+.root[data-phase='plan'] .phase {
+  color: var(--dsw-alias-label-secondary);
+}
+
+.root[data-phase='verification'] .phase,
+.root[data-phase='done'] .phase {
+  color: var(--dsw-alias-state-success-primary);
+}
+
+.root[data-phase='warning'] .phase {
+  color: var(--dsw-alias-state-warning-primary, var(--dsw-alias-label-secondary));
+}
+
+.root[data-state='running']::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--dsw-alias-label-caption) 30%, transparent),
+    transparent
+  );
+  animation: dsh-public-progress-pulse 1.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes dsh-public-progress-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root[data-state='running']::after {
+    animation: none;
+  }
+}

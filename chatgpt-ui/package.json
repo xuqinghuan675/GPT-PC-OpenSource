@@ -1,0 +1,31 @@
+{
+  "name": "chatgpt-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "tsc --noEmit && vite build",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "lint": "biome lint src",
+    "test": "node --test tests/visual-events.test.mjs tests/history-page.test.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.12",
+    "@tauri-apps/cli": "2.11.4",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

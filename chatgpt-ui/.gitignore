@@ -1,0 +1,9 @@
+node_modules/
+dist/
+src-tauri/target/
+.cargo/
+.rustup/
+tools/rustup-init.exe
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+# Source template only. Each computer creates its own machine.local.toml.
+[identity]
+connector_name = "Local PC"
+display_name = "Local computer"
+machine_slug = "local-pc"
+[paths]
+runtime_root = 'C:\GPT-PC'
+default_work_root = 'C:\GPT-PC\workspaces'
+agent_data_dir = 'C:\GPT-PC\chatgpt-agent-data'
+[chatgpt]
+project_name = "GPTAgent"
+plugin_app_id = "" # set to the current ChatGPT app id, e.g. asdk_app_<32 hex>
+[browser]
+backend = "playwright-cdp"
+cdp_endpoint = "http://127.0.0.1:9232"
+profile_dir = 'C:\GPT-PC\chatgpt-agent-data\browser-profile'
+browser_executable = "auto"
+[watchdog]
+enabled = false
+replicas = 1
+spawn_interval_minutes = 30
+max_agent_age_minutes = 60
+risk_window_minutes = 95
+turn_rotation_minutes = 60
+max_consecutive_recoveries = 3
+no_progress_turn_limit = 3
+[limits]
+max_depth = 3
+max_children_per_agent = 3
+max_parallel_children_per_agent = 3
+max_live_agents = 16
+[agents]
+default_reasoning_effort = "extra_high"
+allow_pro = false
+latency_priority_allowed_efforts = ["high", "medium"]

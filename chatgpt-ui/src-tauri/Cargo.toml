@@ -1,0 +1,19 @@
+[package]
+name = "chatgpt-ui"
+version = "0.1.0"
+description = "Lightweight GPT-PC Agent Activity Console"
+authors = ["GPT-PC contributors"]
+edition = "2024"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde_json = "1"
+base64 = "0.22"
+image = { version = "0.25.10", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

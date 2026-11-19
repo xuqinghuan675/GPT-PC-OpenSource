@@ -1,0 +1,24 @@
+[project]
+name = "gpt-pc-mcp"
+version = "0.1.0"
+description = "Local Windows computer MCP for GPT-PC"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "mcp[cli]>=2.1,<3",
+  "psutil>=7,<8",
+  "Pillow>=11.2.1,<13",
+  "opencv-python-headless>=4.10,<5",
+  "playwright>=1.51,<2",
+  "google-api-python-client>=2,<3",
+  "google-auth>=2,<3",
+  "google-auth-httplib2>=0.2,<1",
+  "google-auth-oauthlib>=1.2,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
