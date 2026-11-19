@@ -14,7 +14,7 @@ BrowserSkill, VirtualDesktopAccessor, PowerShell 7, and Gmail OAuth are configur
 
 ## Validation snapshot
 
-- Python backend: 549 tests passed.
+- Python backend and desktop helpers: 574 tests passed, plus 17 subtests.
 - Frontend: 36 tests passed.
 - TypeScript type-check: passed.
 - Vite production build: passed.
