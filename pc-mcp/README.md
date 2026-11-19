@@ -1,25 +1,10 @@
-# GPT-PC MCP server
+# GPT-PC local MCP service
 
-The MCP server exposes local Windows capabilities to an MCP-compatible host. The default transport is stdio; Streamable HTTP is available for local deployments.
+pc-mcp/server.py is the local execution endpoint used by GPT-PC's remote tunnel bridge. It exposes Windows computer capabilities through MCP and applies the local Runtime's workspace/task controls.
 
-## Features
+- For remote web-AI operation, start the loopback Streamable HTTP endpoint with scripts/start-mcp-service.ps1, then connect a compatible external tunnel client using scripts/start-remote-tunnel.ps1.
+- For direct local MCP use, run pc-mcp/server.py --transport stdio.
 
-- Workspace-scoped file, code, and Git operations.
-- Process and background-job management.
-- Runtime coordination, task-scoped control messages, and bounded activity history.
-- Visual context and image handling.
-- Optional browser and Windows computer-use integrations.
-- Optional Gmail operations through a per-install Google OAuth client.
+Features include workspace-scoped file/code/Git operations, process and background-job management, task state/control messages, visual context, and optional browser/Windows computer-use/Gmail integrations.
 
-## Development
-
-From the repository root:
-
-    uv sync --project pc-mcp --extra dev
-    .\pc-mcp\.venv\Scripts\python.exe -m pytest -q .\pc-mcp\tests
-
-Start the server:
-
-    .\pc-mcp\.venv\Scripts\python.exe .\pc-mcp\server.py --transport stdio
-
-For configuration and optional integrations, see ../INSTALL.md and ../docs/CONFIGURATION.md.
+See the root README, INSTALL.md, and docs/REMOTE_TUNNEL.md for the complete bridge architecture and setup.

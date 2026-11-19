@@ -8,6 +8,10 @@
 - Safe configuration templates and installation instructions.
 - MIT license and third-party notices.
 
+## Remote computer bridge
+
+The README and architecture guide now describe the intended web-AI-to-Windows flow: remote control plane, authenticated outbound tunnel, loopback MCP endpoint, and GPT-PC execution controls. A generic launcher is provided for a separately supplied compatible tunnel client.
+
 ## Optional components
 
 BrowserSkill, VirtualDesktopAccessor, PowerShell 7, and Gmail OAuth are configured per installation and are not bundled. See INSTALL.md.

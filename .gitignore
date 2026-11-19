@@ -42,3 +42,7 @@ pc-mcp/scripts/shared_desktop/VirtualDesktopAccessor.dll
 
 # Temporary workspace sandboxes
 workspaces/
+config/tunnel-profile.yaml
+config/tunnel-profile.yml
+config/tunnel-profile.json
+tunnel/

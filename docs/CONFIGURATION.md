@@ -30,3 +30,16 @@ Copy config/machine.example.toml to config/machine.local.toml. Edit identity, pa
 | GPT_PC_CODEBASE_MEMORY_EXE | Optional code-navigation helper executable |
 
 See config/example.env for a copyable list. The file is a template; GPT-PC does not automatically load it.
+
+## Remote tunnel
+
+| Variable | Purpose |
+| --- | --- |
+| GPT_PC_TUNNEL_CLIENT_EXE | External tunnel-client executable |
+| GPT_PC_TUNNEL_PROFILE | Local tunnel profile for this computer |
+| GPT_PC_TUNNEL_API_KEY | Control-plane API key, provided through the process environment |
+| GPT_PC_MCP_HOST | Local MCP bind host; defaults to 127.0.0.1 |
+| GPT_PC_MCP_PORT | Local MCP port; defaults to 18765 |
+| GPT_PC_PYTHON | Optional Python executable used by the tunnel launcher |
+
+Tunnel profiles and API keys are per-install secrets. They must remain outside Git. See docs/REMOTE_TUNNEL.md.

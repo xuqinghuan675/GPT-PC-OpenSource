@@ -238,10 +238,10 @@ mcp = MCPServer(
     name="GPT-PC",
     title="GPT-PC",
     description=(
-        "Windows 本机 AI Agent MCP 服务：Runtime、文件、代码、Git、进程、浏览器、Computer Use、Camera、可选 Gmail 与多 Agent 协作。项目说明见 README.md，部署说明见 INSTALL.md。"
+        "GPT-PC 本机执行端：通过 MCP 暴露 Windows 文件、代码、Git、进程、浏览器和桌面能力；可由远程控制平面经认证隧道访问本机 Streamable HTTP 端点。"
     ),
     instructions=(
-        "为用户授权的本机 AI 工作流提供 MCP 工具。写操作应保护已有文件并遵循工作区控制规则；stdio 模式下 stdout 仅用于 MCP 协议，诊断写入 stderr。浏览器、虚拟桌面和 Gmail 属于可选集成，缺少依赖或本机配置时应给出清晰错误。活动控制台仅显示显式公开进度和脱敏工具活动，不采集私有模型推理。"
+        "为网页 AI 或本机 MCP Host 提供受工作区与任务规则约束的 Windows 工具。远程模式使用 loopback Streamable HTTP，并由外部隧道客户端连接控制平面；本机直连可使用 stdio。写操作应保护已有文件并遵循工作区控制规则；stdio 模式下 stdout 仅用于 MCP 协议，诊断写入 stderr。活动控制台仅显示显式公开进度和脱敏工具活动，不采集私有模型推理。"
     ),
     version="0.1.0",
 )

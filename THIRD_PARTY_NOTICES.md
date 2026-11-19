@@ -18,3 +18,7 @@ GPT-PC's own source code is licensed under the MIT License in LICENSE. Third-par
 - Tauri/Rust dependencies include projects distributed under MIT and/or Apache-2.0; consult the package manifests and upstream license files for the exact version resolved by the lockfiles.
 
 The dependency lockfiles identify the versions used for this source snapshot. Each dependency's own license applies; this file does not relicense third-party packages.
+
+## Remote tunnel provider
+
+GPT-PC's remote bridge launcher is an integration point for a separately supplied tunnel client and hosted control plane. No tunnel-client executable, control-plane server, tunnel profile, or provider credentials are redistributed in this repository. The operator is responsible for the external provider's license and service terms.
